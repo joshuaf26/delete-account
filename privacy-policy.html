@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Política de Privacidad – Journah | Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de privacidad de la app Journah. Privacy policy for Journah app.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7C3AED;
+            --primary-light: #A78BFA;
+            --primary-dark: #5B21B6;
+            --bg-gradient-start: #0F172A;
+            --bg-gradient-end: #1E293B;
+            --card-bg: rgba(30, 41, 59, 0.8);
+            --card-border: rgba(148, 163, 184, 0.1);
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --accent: #22D3EE;
+            --warning: #F59E0B;
+            --success: #10B981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+            min-height: 100vh;
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .lang-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-light);
+            color: var(--text-primary);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 10px 40px rgba(124, 58, 237, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--text-primary), var(--primary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .card-icon.info {
+            background: linear-gradient(135deg, var(--accent), #0891B2);
+        }
+
+        .card-icon.warning {
+            background: linear-gradient(135deg, var(--warning), #D97706);
+        }
+
+        .card-icon.success {
+            background: linear-gradient(135deg, var(--success), #059669);
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* List */
+        .data-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+
+        .data-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: background 0.3s ease;
+        }
+
+        .data-list li:hover {
+            background: rgba(124, 58, 237, 0.2);
+        }
+
+        .data-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Email highlight */
+        .email-highlight {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Back link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        footer .app-name {
+            font-weight: 600;
+            color: var(--primary-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+
+        /* Hide language content by default */
+        [data-lang="en"] {
+            display: none;
+        }
+
+        html[lang="en"] [data-lang="es"] {
+            display: none;
+        }
+
+        html[lang="en"] [data-lang="en"] {
+            display: block;
+        }
+
+        html[lang="en"] li[data-lang="en"],
+        html[lang="es"] li[data-lang="es"] {
+            display: flex;
+        }
+
+        html[lang="en"] li[data-lang="es"] {
+            display: none;
+        }
+
+        html[lang="es"] li[data-lang="en"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="setLang('es')" id="btn-es">🇪🇸 Español</button>
+            <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇺🇸 English</button>
+        </div>
+
+        <!-- Back Link -->
+        <a href="index.html" class="back-link" data-lang="es">← Volver a eliminación de cuenta</a>
+        <a href="index.html" class="back-link" data-lang="en">← Back to account deletion</a>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">📖</div>
+            <h1 data-lang="es">Política de Privacidad</h1>
+            <h1 data-lang="en">Privacy Policy</h1>
+            <p class="subtitle" data-lang="es">Journah – Diario devocional cristiano</p>
+            <p class="subtitle" data-lang="en">Journah – Christian devotional journal</p>
+        </header>
+
+        <!-- Intro Card -->
+        <div class="card">
+            <div class="card-icon">🔒</div>
+            <h2 data-lang="es">Tu privacidad es nuestra prioridad</h2>
+            <h2 data-lang="en">Your privacy is our priority</h2>
+            <p data-lang="es">
+                Journah es una aplicación de diario devocional cristiano.
+                Respetamos tu privacidad y nos comprometemos a proteger tus datos personales.
+            </p>
+            <p data-lang="en">
+                Journah is a Christian devotional journal app.
+                We respect your privacy and are committed to protecting your personal data.
+            </p>
+        </div>
+
+        <!-- Data Collected Card -->
+        <div class="card">
+            <div class="card-icon info">📋</div>
+            <h2 data-lang="es">Información que recopilamos</h2>
+            <h2 data-lang="en">Information we collect</h2>
+            <p data-lang="es">La app Journah recopila los siguientes datos personales:</p>
+            <p data-lang="en">The Journah app collects the following personal data:</p>
+
+            <ul class="data-list">
+                <li data-lang="es">Nombre y apellido</li>
+                <li data-lang="en">First and last name</li>
+                <li data-lang="es">Dirección de correo electrónico</li>
+                <li data-lang="en">Email address</li>
+                <li data-lang="es">ID de usuario</li>
+                <li data-lang="en">User ID</li>
+                <li data-lang="es">Número de teléfono (opcional)</li>
+                <li data-lang="en">Phone number (optional)</li>
+                <li data-lang="es">Contenido generado por el usuario (diarios, peticiones, promesas)</li>
+                <li data-lang="en">User-generated content (journals, prayer requests, promises)</li>
+            </ul>
+        </div>
+
+        <!-- Data Usage Card -->
+        <div class="card">
+            <div class="card-icon success">✨</div>
+            <h2 data-lang="es">Uso de la información</h2>
+            <h2 data-lang="en">How we use your information</h2>
+            <p data-lang="es">Los datos recopilados se utilizan exclusivamente para:</p>
+            <p data-lang="en">The collected data is used exclusively to:</p>
+
+            <ul class="data-list">
+                <li data-lang="es">Administrar la cuenta del usuario</li>
+                <li data-lang="en">Manage the user account</li>
+                <li data-lang="es">Permitir el acceso a la app</li>
+                <li data-lang="en">Allow access to the app</li>
+                <li data-lang="es">Guardar el contenido personal del usuario</li>
+                <li data-lang="en">Save the user's personal content</li>
+                <li data-lang="es">Proveer las funciones principales de Journah</li>
+                <li data-lang="en">Provide Journah's core features</li>
+            </ul>
+        </div>
+
+        <!-- Data Sharing Card -->
+        <div class="card">
+            <div class="card-icon">🤝</div>
+            <h2 data-lang="es">Compartición de datos</h2>
+            <h2 data-lang="en">Data sharing</h2>
+            <p data-lang="es">
+                Journah <strong>no comparte</strong> datos personales de los usuarios con terceros.
+                Los datos se almacenan de forma segura utilizando servicios de infraestructura en la nube.
+            </p>
+            <p data-lang="en">
+                Journah <strong>does not share</strong> users' personal data with third parties.
+                Data is stored securely using cloud infrastructure services.
+            </p>
+        </div>
+
+        <!-- Security Card -->
+        <div class="card">
+            <div class="card-icon success">🛡️</div>
+            <h2 data-lang="es">Seguridad</h2>
+            <h2 data-lang="en">Security</h2>
+            <p data-lang="es">
+                Los datos se transfieren mediante conexiones seguras y cifradas (HTTPS/TLS).
+                Implementamos las mejores prácticas de seguridad para proteger tu información.
+            </p>
+            <p data-lang="en">
+                Data is transferred through secure and encrypted connections (HTTPS/TLS).
+                We implement security best practices to protect your information.
+            </p>
+        </div>
+
+        <!-- Account Deletion Card -->
+        <div class="card">
+            <div class="card-icon warning">🗑️</div>
+            <h2 data-lang="es">Eliminación de cuenta y datos</h2>
+            <h2 data-lang="en">Account and data deletion</h2>
+            <p data-lang="es">
+                Los usuarios pueden solicitar la eliminación de su cuenta y de todos los datos asociados
+                enviando un correo electrónico a:
+            </p>
+            <p data-lang="en">
+                Users can request the deletion of their account and all associated data
+                by sending an email to:
+            </p>
+            <div style="text-align: center;">
+                <span class="email-highlight">📧 jbsapps05@gmail.com</span>
+            </div>
+            <p data-lang="es" style="margin-top: 16px;">
+                Una vez procesada la solicitud, la cuenta y los datos personales serán eliminados de forma permanente.
+            </p>
+            <p data-lang="en" style="margin-top: 16px;">
+                Once the request is processed, the account and personal data will be permanently deleted.
+            </p>
+        </div>
+
+        <!-- Policy Changes Card -->
+        <div class="card">
+            <div class="card-icon">📝</div>
+            <h2 data-lang="es">Cambios en esta política</h2>
+            <h2 data-lang="en">Changes to this policy</h2>
+            <p data-lang="es">
+                Esta política de privacidad puede actualizarse en el futuro.
+                Los cambios se reflejarán en esta misma página.
+            </p>
+            <p data-lang="en">
+                This privacy policy may be updated in the future.
+                Changes will be reflected on this page.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 <span class="app-name">Journah</span></p>
+            <p data-lang="es">Diario devocional cristiano</p>
+            <p data-lang="en">Christian devotional journal</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            localStorage.setItem('journah-lang', lang);
+        }
+
+        // Check saved language preference or browser language
+        (function () {
+            const saved = localStorage.getItem('journah-lang');
+            if (saved) {
+                setLang(saved);
+            } else {
+                const browserLang = navigator.language.slice(0, 2);
+                setLang(browserLang === 'en' ? 'en' : 'es');
+            }
+        })();
+    </script>
+
+</body>
+
+</html>
