@@ -125,6 +125,16 @@
             font-size: 1.1rem;
         }
 
+        .effective-date {
+            display: inline-block;
+            background: rgba(124, 58, 237, 0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--primary-light);
+            margin-top: 12px;
+        }
+
         /* Cards */
         .card {
             background: var(--card-bg);
@@ -220,6 +230,12 @@
             border-radius: 50px;
             font-weight: 600;
             margin-top: 8px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .email-highlight:hover {
+            transform: scale(1.05);
         }
 
         /* Back link */
@@ -236,6 +252,24 @@
 
         .back-link:hover {
             color: var(--accent);
+        }
+
+        /* Developer info box */
+        .dev-info {
+            background: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .dev-info p {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .dev-info p:last-child {
+            margin-bottom: 0;
         }
 
         /* Footer */
@@ -293,7 +327,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <!-- Language Switcher -->
         <div class="lang-switcher">
@@ -312,7 +345,24 @@
             <h1 data-lang="en">Privacy Policy</h1>
             <p class="subtitle" data-lang="es">Journah – Diario devocional cristiano</p>
             <p class="subtitle" data-lang="en">Journah – Christian devotional journal</p>
+            <span class="effective-date" data-lang="es">📅 Fecha de vigencia: 8 de enero de 2026</span>
+            <span class="effective-date" data-lang="en">📅 Effective date: January 8, 2026</span>
         </header>
+
+        <!-- Developer Info Card -->
+        <div class="card">
+            <div class="card-icon info">👨‍💻</div>
+            <h2 data-lang="es">Información del desarrollador</h2>
+            <h2 data-lang="en">Developer information</h2>
+            <p data-lang="es">Esta aplicación es desarrollada y operada por:</p>
+            <p data-lang="en">This application is developed and operated by:</p>
+            <div class="dev-info">
+                <p><strong data-lang="es">Desarrollador:</strong><strong data-lang="en">Developer:</strong> JBS Apps</p>
+                <p><strong data-lang="es">Correo de contacto:</strong><strong data-lang="en">Contact email:</strong>
+                    jbsapps05@gmail.com</p>
+                <p><strong data-lang="es">Aplicación:</strong><strong data-lang="en">Application:</strong> Journah</p>
+            </div>
+        </div>
 
         <!-- Intro Card -->
         <div class="card">
@@ -320,12 +370,14 @@
             <h2 data-lang="es">Tu privacidad es nuestra prioridad</h2>
             <h2 data-lang="en">Your privacy is our priority</h2>
             <p data-lang="es">
-                Journah es una aplicación de diario devocional cristiano.
-                Respetamos tu privacidad y nos comprometemos a proteger tus datos personales.
+                Journah es una aplicación de diario devocional cristiano diseñada para usuarios mayores de 13 años.
+                Respetamos tu privacidad y nos comprometemos a proteger tus datos personales de acuerdo con las
+                normativas aplicables.
             </p>
             <p data-lang="en">
-                Journah is a Christian devotional journal app.
-                We respect your privacy and are committed to protecting your personal data.
+                Journah is a Christian devotional journal app designed for users aged 13 and older.
+                We respect your privacy and are committed to protecting your personal data in accordance with
+                applicable regulations.
             </p>
         </div>
 
@@ -334,19 +386,20 @@
             <div class="card-icon info">📋</div>
             <h2 data-lang="es">Información que recopilamos</h2>
             <h2 data-lang="en">Information we collect</h2>
-            <p data-lang="es">La app Journah recopila los siguientes datos personales:</p>
-            <p data-lang="en">The Journah app collects the following personal data:</p>
+            <p data-lang="es">La app Journah recopila los siguientes datos personales con tu consentimiento explícito:
+            </p>
+            <p data-lang="en">The Journah app collects the following personal data with your explicit consent:</p>
 
             <ul class="data-list">
                 <li data-lang="es">Nombre y apellido</li>
                 <li data-lang="en">First and last name</li>
                 <li data-lang="es">Dirección de correo electrónico</li>
                 <li data-lang="en">Email address</li>
-                <li data-lang="es">ID de usuario</li>
-                <li data-lang="en">User ID</li>
-                <li data-lang="es">Número de teléfono (opcional)</li>
-                <li data-lang="en">Phone number (optional)</li>
-                <li data-lang="es">Contenido generado por el usuario (diarios, peticiones, promesas)</li>
+                <li data-lang="es">ID de usuario (generado automáticamente)</li>
+                <li data-lang="en">User ID (automatically generated)</li>
+                <li data-lang="es">Número de teléfono (opcional, si proporcionas)</li>
+                <li data-lang="en">Phone number (optional, if you provide it)</li>
+                <li data-lang="es">Contenido generado por el usuario (diarios, peticiones de oración, promesas)</li>
                 <li data-lang="en">User-generated content (journals, prayer requests, promises)</li>
             </ul>
         </div>
@@ -360,15 +413,48 @@
             <p data-lang="en">The collected data is used exclusively to:</p>
 
             <ul class="data-list">
-                <li data-lang="es">Administrar la cuenta del usuario</li>
-                <li data-lang="en">Manage the user account</li>
-                <li data-lang="es">Permitir el acceso a la app</li>
-                <li data-lang="en">Allow access to the app</li>
-                <li data-lang="es">Guardar el contenido personal del usuario</li>
-                <li data-lang="en">Save the user's personal content</li>
+                <li data-lang="es">Crear y administrar tu cuenta de usuario</li>
+                <li data-lang="en">Create and manage your user account</li>
+                <li data-lang="es">Permitir el inicio de sesión y acceso a la app</li>
+                <li data-lang="en">Allow login and access to the app</li>
+                <li data-lang="es">Sincronizar y guardar tu contenido personal de forma segura</li>
+                <li data-lang="en">Sync and securely save your personal content</li>
                 <li data-lang="es">Proveer las funciones principales de Journah</li>
                 <li data-lang="en">Provide Journah's core features</li>
             </ul>
+        </div>
+
+        <!-- Third Party Services Card -->
+        <div class="card">
+            <div class="card-icon warning">🔗</div>
+            <h2 data-lang="es">Servicios de terceros</h2>
+            <h2 data-lang="en">Third-party services</h2>
+            <p data-lang="es">Journah utiliza los siguientes servicios de terceros para su funcionamiento:</p>
+            <p data-lang="en">Journah uses the following third-party services for its operation:</p>
+
+            <ul class="data-list">
+                <li data-lang="es"><strong>Firebase Authentication:</strong> Para gestionar el inicio de sesión y la
+                    autenticación de usuarios</li>
+                <li data-lang="en"><strong>Firebase Authentication:</strong> To manage user login and authentication
+                </li>
+                <li data-lang="es"><strong>Firebase Firestore:</strong> Para almacenar datos de usuario de forma segura
+                    en la nube</li>
+                <li data-lang="en"><strong>Firebase Firestore:</strong> To securely store user data in the cloud</li>
+                <li data-lang="es"><strong>Firebase Analytics:</strong> Para análisis anónimos de uso de la aplicación
+                </li>
+                <li data-lang="en"><strong>Firebase Analytics:</strong> For anonymous app usage analytics</li>
+            </ul>
+
+            <p data-lang="es" style="margin-top: 16px;">
+                Estos servicios son proporcionados por Google y están sujetos a la
+                <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">Política de
+                    Privacidad de Google</a>.
+            </p>
+            <p data-lang="en" style="margin-top: 16px;">
+                These services are provided by Google and are subject to
+                <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent);">Google's
+                    Privacy Policy</a>.
+            </p>
         </div>
 
         <!-- Data Sharing Card -->
@@ -377,12 +463,60 @@
             <h2 data-lang="es">Compartición de datos</h2>
             <h2 data-lang="en">Data sharing</h2>
             <p data-lang="es">
-                Journah <strong>no comparte</strong> datos personales de los usuarios con terceros.
-                Los datos se almacenan de forma segura utilizando servicios de infraestructura en la nube.
+                Journah <strong>no vende, alquila ni comparte</strong> tus datos personales con terceros con fines
+                comerciales o publicitarios. Tus datos solo se comparten con los proveedores de servicios mencionados
+                anteriormente (Firebase/Google) exclusivamente para el funcionamiento de la aplicación.
             </p>
             <p data-lang="en">
-                Journah <strong>does not share</strong> users' personal data with third parties.
-                Data is stored securely using cloud infrastructure services.
+                Journah <strong>does not sell, rent, or share</strong> your personal data with third parties for
+                commercial or advertising purposes. Your data is only shared with the service providers mentioned
+                above (Firebase/Google) exclusively for the app's operation.
+            </p>
+        </div>
+
+        <!-- Data Retention Card -->
+        <div class="card">
+            <div class="card-icon info">⏳</div>
+            <h2 data-lang="es">Retención de datos</h2>
+            <h2 data-lang="en">Data retention</h2>
+            <p data-lang="es">
+                Tus datos personales se conservan mientras tu cuenta permanezca activa. Cuando solicitas la eliminación
+                de tu cuenta, todos tus datos se eliminan de forma permanente en un plazo máximo de 7 días hábiles.
+                No conservamos copias de tus datos después de la eliminación, salvo que la ley lo requiera.
+            </p>
+            <p data-lang="en">
+                Your personal data is retained as long as your account remains active. When you request account
+                deletion, all your data is permanently deleted within a maximum of 7 business days.
+                We do not retain copies of your data after deletion, unless required by law.
+            </p>
+        </div>
+
+        <!-- User Rights Card -->
+        <div class="card">
+            <div class="card-icon success">⚖️</div>
+            <h2 data-lang="es">Tus derechos</h2>
+            <h2 data-lang="en">Your rights</h2>
+            <p data-lang="es">Como usuario de Journah, tienes derecho a:</p>
+            <p data-lang="en">As a Journah user, you have the right to:</p>
+
+            <ul class="data-list">
+                <li data-lang="es">Acceder a tus datos personales almacenados</li>
+                <li data-lang="en">Access your stored personal data</li>
+                <li data-lang="es">Solicitar la corrección de datos inexactos</li>
+                <li data-lang="en">Request correction of inaccurate data</li>
+                <li data-lang="es">Solicitar la eliminación de tu cuenta y todos tus datos</li>
+                <li data-lang="en">Request deletion of your account and all your data</li>
+                <li data-lang="es">Exportar tus datos en un formato legible</li>
+                <li data-lang="en">Export your data in a readable format</li>
+                <li data-lang="es">Retirar tu consentimiento en cualquier momento</li>
+                <li data-lang="en">Withdraw your consent at any time</li>
+            </ul>
+
+            <p data-lang="es" style="margin-top: 16px;">
+                Para ejercer cualquiera de estos derechos, contáctanos a través del correo electrónico indicado abajo.
+            </p>
+            <p data-lang="en" style="margin-top: 16px;">
+                To exercise any of these rights, contact us via the email address listed below.
             </p>
         </div>
 
@@ -392,12 +526,38 @@
             <h2 data-lang="es">Seguridad</h2>
             <h2 data-lang="en">Security</h2>
             <p data-lang="es">
-                Los datos se transfieren mediante conexiones seguras y cifradas (HTTPS/TLS).
-                Implementamos las mejores prácticas de seguridad para proteger tu información.
+                Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos:
             </p>
             <p data-lang="en">
-                Data is transferred through secure and encrypted connections (HTTPS/TLS).
-                We implement security best practices to protect your information.
+                We implement technical and organizational security measures to protect your data:
+            </p>
+
+            <ul class="data-list">
+                <li data-lang="es">Transmisión de datos cifrada mediante HTTPS/TLS</li>
+                <li data-lang="en">Encrypted data transmission using HTTPS/TLS</li>
+                <li data-lang="es">Almacenamiento seguro en servidores de Firebase (Google Cloud)</li>
+                <li data-lang="en">Secure storage on Firebase servers (Google Cloud)</li>
+                <li data-lang="es">Autenticación segura con Firebase Authentication</li>
+                <li data-lang="en">Secure authentication with Firebase Authentication</li>
+                <li data-lang="es">Reglas de seguridad que limitan el acceso solo a tus propios datos</li>
+                <li data-lang="en">Security rules that limit access to only your own data</li>
+            </ul>
+        </div>
+
+        <!-- Children's Privacy Card -->
+        <div class="card">
+            <div class="card-icon warning">👶</div>
+            <h2 data-lang="es">Privacidad de menores</h2>
+            <h2 data-lang="en">Children's privacy</h2>
+            <p data-lang="es">
+                Journah está diseñada para usuarios mayores de 13 años. No recopilamos intencionalmente información
+                de niños menores de 13 años. Si descubrimos que hemos recopilado datos de un menor de 13 años sin
+                verificación del consentimiento parental, eliminaremos esa información de inmediato.
+            </p>
+            <p data-lang="en">
+                Journah is designed for users aged 13 and older. We do not knowingly collect information from
+                children under 13. If we discover that we have collected data from a child under 13 without
+                parental consent verification, we will delete that information immediately.
             </p>
         </div>
 
@@ -407,21 +567,24 @@
             <h2 data-lang="es">Eliminación de cuenta y datos</h2>
             <h2 data-lang="en">Account and data deletion</h2>
             <p data-lang="es">
-                Los usuarios pueden solicitar la eliminación de su cuenta y de todos los datos asociados
+                Puedes solicitar la eliminación de tu cuenta y todos los datos asociados en cualquier momento
                 enviando un correo electrónico a:
             </p>
             <p data-lang="en">
-                Users can request the deletion of their account and all associated data
+                You can request the deletion of your account and all associated data at any time
                 by sending an email to:
             </p>
             <div style="text-align: center;">
-                <span class="email-highlight">📧 jbsapps05@gmail.com</span>
+                <a href="mailto:jbsapps05@gmail.com?subject=Eliminar%20cuenta%20Journah" class="email-highlight">📧
+                    jbsapps05@gmail.com</a>
             </div>
             <p data-lang="es" style="margin-top: 16px;">
-                Una vez procesada la solicitud, la cuenta y los datos personales serán eliminados de forma permanente.
+                Una vez procesada la solicitud (máximo 7 días hábiles), la cuenta y todos los datos personales
+                serán eliminados de forma permanente e irreversible.
             </p>
             <p data-lang="en" style="margin-top: 16px;">
-                Once the request is processed, the account and personal data will be permanently deleted.
+                Once the request is processed (maximum 7 business days), the account and all personal data
+                will be permanently and irreversibly deleted.
             </p>
         </div>
 
@@ -431,13 +594,33 @@
             <h2 data-lang="es">Cambios en esta política</h2>
             <h2 data-lang="en">Changes to this policy</h2>
             <p data-lang="es">
-                Esta política de privacidad puede actualizarse en el futuro.
-                Los cambios se reflejarán en esta misma página.
+                Esta política de privacidad puede actualizarse periódicamente. Cuando realicemos cambios significativos,
+                actualizaremos la fecha de vigencia en la parte superior de esta página. Te recomendamos revisar
+                esta política regularmente para estar informado sobre cómo protegemos tus datos.
             </p>
             <p data-lang="en">
-                This privacy policy may be updated in the future.
-                Changes will be reflected on this page.
+                This privacy policy may be updated periodically. When we make significant changes,
+                we will update the effective date at the top of this page. We recommend reviewing
+                this policy regularly to stay informed about how we protect your data.
             </p>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="card">
+            <div class="card-icon info">📬</div>
+            <h2 data-lang="es">Contacto</h2>
+            <h2 data-lang="en">Contact</h2>
+            <p data-lang="es">
+                Si tienes preguntas, inquietudes o solicitudes relacionadas con esta política de privacidad
+                o el manejo de tus datos personales, puedes contactarnos en:
+            </p>
+            <p data-lang="en">
+                If you have questions, concerns, or requests related to this privacy policy
+                or the handling of your personal data, you can contact us at:
+            </p>
+            <div style="text-align: center;">
+                <a href="mailto:jbsapps05@gmail.com" class="email-highlight">📧 jbsapps05@gmail.com</a>
+            </div>
         </div>
 
         <!-- Footer -->
@@ -445,6 +628,8 @@
             <p>© 2026 <span class="app-name">Journah</span></p>
             <p data-lang="es">Diario devocional cristiano</p>
             <p data-lang="en">Christian devotional journal</p>
+            <p style="margin-top: 12px; font-size: 0.8rem;" data-lang="es">Última actualización: 8 de enero de 2026</p>
+            <p style="margin-top: 12px; font-size: 0.8rem;" data-lang="en">Last updated: January 8, 2026</p>
         </footer>
     </div>
 
@@ -467,7 +652,6 @@
             }
         })();
     </script>
-
 </body>
 
 </html>
